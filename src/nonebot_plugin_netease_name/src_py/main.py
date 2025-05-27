@@ -5,12 +5,12 @@ Netease Minecraft Nickname Random by wangyupu
 可自定义
 """
 
-from pathlib import Path
-import random
-import os
 import hashlib
-import time
 import json
+import os
+import random
+import time
+from pathlib import Path
 
 # 不要改啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
 _version = 0.1
@@ -33,10 +33,10 @@ except:  # noqa: E722
 ##print(f"获取到的名称片段:{dbfs}")
 # 写入变量
 for filename in dbfs:
-    with open(f"{path}db/{filename}", mode="r") as file:
+    with open(f"{path}db/{filename}") as file:
         dbs[filename] = file.read().split("\n")
 
-with open(f"{path}db/字到音", mode="r") as file:
+with open(f"{path}db/字到音") as file:
     lines = file.read().split("\n")
     for item in lines:
         lineitems = item.split(",")
@@ -44,10 +44,10 @@ with open(f"{path}db/字到音", mode="r") as file:
 
 name_stru = {}
 name_stru_keys = []
-with open(f"{path}name_strus.json", mode="r") as file:
+with open(f"{path}name_strus.json") as file:
     name_stru = json.load(file)  # type: ignore
 
-for k, v in name_stru.items():
+for k in name_stru.keys():
     name_stru_keys.append(k)
 
 ##print("加载db成功")
