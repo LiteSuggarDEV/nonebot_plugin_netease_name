@@ -3,7 +3,7 @@
     <img src="https://github.com/user-attachments/assets/b5162036-5b17-4cf4-b0cb-8ec842a71bc6" width="200" alt="NB Logo">
   </a>
   <h1>NeteaseName</h1>
-  <h3>网易名称生成器！</h3>
+  <h3>网易昵称生成器！</h3>
 
   <p>
     <a href="https://www.python.org/">
@@ -23,5 +23,6 @@
 
 # 版权
 
-本项目基于wangyupu的[NNG](https://github.com/wang-yupu/netease_mc_name_generator)
-基于GPL v3.0协议进行开源。
+* 本项目基于wangyupu的[NNG](https://github.com/wang-yupu/netease_mc_name_generator)
+
+* 基于GPL v3.0协议进行开源。
