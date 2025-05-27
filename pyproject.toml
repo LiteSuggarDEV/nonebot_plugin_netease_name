@@ -1,7 +1,10 @@
 [project]
 name = "nonebot-plugin-netease-name"
 version = "0.1.0"
-description = "Add your description here"
+description = "Nonebot plugin for for generating Minecraft Netease Version nickname"
 readme = "README.md"
-requires-python = ">=3.10"
-dependencies = []
+requires-python = ">=3.10, <4.0"
+dependencies = [
+    "nonebot-adapter-onebot>=2.4.6",
+    "nonebot2>=2.4.2",
+]
