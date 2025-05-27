@@ -1,6 +1,8 @@
 from nonebot.plugin import PluginMetadata
 from nonebot.plugin import on_command
+from nonebot.adapters.onebot.v11 import Bot, MessageEvent
 from .src_py.main import get_random_nickname, init_random
+
 __plugin_meta__ = PluginMetadata(
     name="网易版MC昵称生成器",
     description="使用词典生成随机昵称",
@@ -15,5 +17,5 @@ name = on_command("name", aliases={"网易昵称"}, priority=5)
 
 
 @name.handle()
-async def _(bot, event):
+async def _():
     await name.finish(get_random_nickname())
