@@ -1,7 +1,7 @@
 from nonebot.plugin import PluginMetadata, on_command, require
 
 require("nonebot_plugin_localstore")
-from .lib.main import get_random_nickname, init_random
+from .main import get_random_nickname, init_random
 
 __plugin_meta__ = PluginMetadata(
     name="网易版MC昵称生成器", # type: ignore
