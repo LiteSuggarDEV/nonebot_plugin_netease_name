@@ -1,8 +1,7 @@
-from nonebot.adapters.onebot.v11 import Message
-from nonebot.params import CommandArg
-from nonebot.plugin import PluginMetadata, on_command
+from nonebot.plugin import PluginMetadata, on_command, require
 
-from .src_py.main import get_random_nickname, init_random
+require("nonebot_plugin_localstore")
+from .lib.main import get_random_nickname, init_random
 
 __plugin_meta__ = PluginMetadata(
     name="网易版MC昵称生成器", # type: ignore
@@ -14,9 +13,9 @@ __plugin_meta__ = PluginMetadata(
 
 init_random()
 
-name = on_command("name", aliases={"网易昵称"}, priority=5)
+name = on_command("name", aliases={"网易昵称"}, priority=10)
 
 
 @name.handle()
-async def _(args: Message = CommandArg()):
-    await name.finish(get_random_nickname())
+async def _():
+    await name.finish("给你整了个名：" + get_random_nickname())

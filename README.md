@@ -26,3 +26,32 @@
 * 本项目基于wangyupu的[NNG](https://github.com/wang-yupu/netease_mc_name_generator)
 
 * 基于GPL v3.0协议进行开源。
+
+# 快速开始
+
+1. 安装依赖
+
+  ```bash
+  uv install nonebot_plugin_neteasename
+  ```
+
+2. 声明插件
+
+  打开pyproject.toml文件，在[tool.nonebot]节点下添加如下内容：
+
+  ```toml
+  plugins = ["nonebot_plugin_neteasename"]
+  ```
+
+# 指令说明
+
+```explaintext
+/name
+/网易昵称
+```
+
+获取随机生成的网易风格昵称
+
+# 配置文件
+
+我们使用`nonebot_plugin_localstore`管理存储，在插件配置目录下有个name_strus.json文件，里面是所有可能的昵称结构，你可以修改这个文件来修改昵称结构。
